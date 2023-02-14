@@ -110,7 +110,7 @@ const Board = ({ values, numbers, setNumbers }) => {
                 alert("Only 6 Need to be Selected")
             }
             else {
-                event.target.style.background = "#c5dfc5"
+                event.target.style.background = "#749774"
                 //    console.log(key)
                 arr[key] = true
                 //   console.log(arr[key])
