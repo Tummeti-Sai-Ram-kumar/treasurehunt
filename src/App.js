@@ -1,7 +1,8 @@
 import React from 'react'
-
 import NavBar from './components/navbar';
 import GameBoard from './components/game';
+
+
 function App() {
   const values = [];
   for(let i=0;i<48;i++){

@@ -1,116 +1,133 @@
-.board{
-    display : grid;
-    grid-template-columns : repeat(6,1fr);
-    grid-template-rows : repeat(8,80px);
-    width : 80%;
-    margin : 50px auto;
+body{
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.main-div{
-    width : 100%;
-    margin : 0px auto;
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(8, 80px);
+    width: 80%;
+    margin: 50px auto;
 }
-.chip{
+
+.main-div {
+    width: 100%;
+    margin: 0px auto;
+}
+
+.chip {
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Poppins;
     font-weight: bold;
-    margin : 10px;
+    margin: 10px;
     background: #c6c0a8;
     cursor: pointer;
 }
 
-.chip:hover{
+.chip:hover {
     opacity: 0.8;
 }
 
-.timer-div{
-    font-family : Poppins;
+.timer-div {
+    font-family: Poppins;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.timer-div button{
-    padding : 5px 25px;
+
+.timer-div button {
+    padding: 5px 25px;
     font-size: 24px;
     cursor: pointer;
     border-radius: 2px;
-    border : none;
+    border: none;
 
     font-family: Poppins;
     box-shadow: 1px 1px 10px grey;
 }
-.timer{
+
+.timer {
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: fixed;
-    top : 20px;
-    right : 10px;
-    
-    height : 100px;
-    width : 100px;
-    border : 4px solid black;
+    top: 20px;
+    right: 10px;
+
+    height: 100px;
+    width: 100px;
+    color: white;
+    border: 4px solid white;
     border-radius: 50%;
     font-size: 28px;
     font-family: "Russo One";
 }
 
-.numbers p{
+.numbers p {
     text-align: center;
     margin: 25px auto;
     font-size: 18px;
     font-family: Poppins;
+    color: white;
 }
 
-.nums{
+.nums {
     display: flex;
-    flex-direction : row;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
-.nums .selected{
-    height : 100px;
-    width : 100px;
+
+.nums .selected {
+    height: 100px;
+    width: 100px;
     font-size: 20px;
     background: rgb(219, 184, 118);
     font-family: "Russo One";
 }
 
 
-.treasure{
+.treasure {
     margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.box{
+
+.box {
     text-align: center;
-    padding : 10px;
-    height : 70px;
-    width : 100px;
+    padding: 10px;
+    height: 70px;
+    width: 100px;
     font-family: "Russo One";
-    font-size : 18px;
+    font-size: 18px;
     background: #bae4ba;
     cursor: pointer;
 }
-.treasure .title{
-    
+
+.treasure .title {
+
     z-index: 10;
 }
-@keyframes rotate{
-    0%{
+
+@keyframes rotate {
+    0% {
         transform: rotateX(0deg);
     }
-    100%{
+
+    100% {
         transform: rotateX(90deg);
     }
 }
 
-.treasure .value{
+.treasure .value {
     position: absolute;
     margin-left: 0px;
     display: flex;
@@ -119,85 +136,102 @@
     z-index: -1;
 }
 
-.results{
+.results {
     text-align: center;
     font-family: Poppins;
-    font-size :20px;
-    margin-top : 25px;
+    font-size: 20px;
+    margin-top: 25px;
+    color: white;
 }
 
-.try{
-    padding : 5px 10px;
-    margin-left : 15px;
+.try {
+    padding: 5px 10px;
+    margin-left: 15px;
     font-family: Poppins;
-    font-size : 20px;
+    font-size: 20px;
     border-radius: 2px;
-    border : none;
+    border: none;
     box-shadow: 1px 1px 10px grey;
     outline: none;
-    color : black;
+    color: black;
     text-decoration: none;
 }
 
-.instructions{
-    margin  : 40px;
+.instructions {
+    margin: 40px;
+    color: white;
 }
-.instructions p{
+
+.instructions p {
     font-family: Poppins;
     font-size: 18px;
 }
 
-.instructions span{
-    margin-right : 5px;
+.instructions span {
+    margin-right: 5px;
 }
+
 @media screen and (max-width : 600px) {
-    .instructions {
-        margin : 30px;
+    body {
+        background-image: none;
+        background: rgb(27, 26, 26);
     }
-    .instructions p{
+
+    .instructions {
+        margin: 30px;
+    }
+
+    .instructions p {
         font-family: Poppins;
         font-size: 14px;
-    
+
     }
-    .timer-div button{
-        padding : 5px 15px;
+
+    .timer-div button {
+        padding: 5px 15px;
         font-size: 16px;
     }
-    .timer{
-        top : 40px;
-        right : 10px;
-        
-        height : 50px;
-        width : 50px;
-        border : 3px solid black;
+
+    .timer {
+        top: 40px;
+        right: 10px;
+
+        height: 50px;
+        width: 50px;
+        border: 3px solid white;
         font-size: 18px;
     }
-    .chip{
+
+    .chip {
         font-size: 12px;
-        height : 40px;
-        width : 30px;
+        height: 40px;
+        width: 30px;
     }
-    .numbers p{
+
+    .numbers p {
         font-size: 14px;
     }
-    .nums .selected{
-        height : 40px;
-        width : 40px;
+
+    .nums .selected {
+        height: 40px;
+        width: 40px;
         font-size: 14px;
     }
-    .box{
-        height : 50px;
+
+    .box {
+        height: 50px;
         width: 60px;
         font-size: 14px;
     }
-    .results{
-        font-size :16px;
-        margin-top : 25px;
+
+    .results {
+        font-size: 16px;
+        margin-top: 25px;
     }
-    
-    .try{
-        padding : 3px 7px;
-        margin-left : 15px;
-        font-size : 16px;
+
+    .try {
+        padding: 3px 7px;
+        margin-left: 15px;
+        font-size: 16px;
     }
 }
