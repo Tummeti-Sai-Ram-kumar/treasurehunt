@@ -1,0 +1,13 @@
+nav{
+    height : 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav p{
+    color : orange;
+    text-align: center;
+    font-size: 30px;
+    font-family: Poppins;
+}
+
