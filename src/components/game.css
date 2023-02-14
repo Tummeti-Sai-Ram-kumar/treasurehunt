@@ -36,7 +36,9 @@
     font-size: 24px;
     cursor: pointer;
     border-radius: 2px;
-    border : 1px solid black;
+    border : none;
+
+    font-family: Poppins;
     box-shadow: 1px 1px 10px grey;
 }
 .timer{
@@ -145,3 +147,57 @@
     font-size: 18px;
 }
 
+.instructions span{
+    margin-right : 5px;
+}
+@media screen and (max-width : 600px) {
+    .instructions {
+        margin : 30px;
+    }
+    .instructions p{
+        font-family: Poppins;
+        font-size: 14px;
+    
+    }
+    .timer-div button{
+        padding : 5px 15px;
+        font-size: 16px;
+    }
+    .timer{
+        top : 40px;
+        right : 10px;
+        
+        height : 50px;
+        width : 50px;
+        border : 3px solid black;
+        font-size: 18px;
+    }
+    .chip{
+        font-size: 12px;
+        height : 40px;
+        width : 30px;
+    }
+    .numbers p{
+        font-size: 14px;
+    }
+    .nums .selected{
+        height : 40px;
+        width : 40px;
+        font-size: 14px;
+    }
+    .box{
+        height : 50px;
+        width: 60px;
+        font-size: 14px;
+    }
+    .results{
+        font-size :16px;
+        margin-top : 25px;
+    }
+    
+    .try{
+        padding : 3px 7px;
+        margin-left : 15px;
+        font-size : 16px;
+    }
+}
