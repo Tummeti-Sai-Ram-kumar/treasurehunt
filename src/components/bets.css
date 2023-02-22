@@ -1,0 +1,49 @@
+.bets{
+    width: 100%;
+}
+.bets-list{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr;
+    grid-auto-rows: 100px;
+    width : 100%;
+    margin : 20px auto;
+}
+.bets-list li{
+    list-style : none;
+    font-size : 18px;
+    font-family : "Russo One";
+    padding : 20px;
+    height : 20px;
+    width : 30px;
+    text-align: center;
+    border-radius : 30%;
+    box-shadow : 1px 1px 10px grey;
+    margin: auto;
+}
+
+
+
+.bets-list li:first-child{
+    border : 4px solid rgba(255,0,0,0.5);
+    background-color: rgba(255,0,0,0.4);
+}
+.bets-list li:nth-child(2){
+    border : 4px solid rgba(154, 205, 50,0.6);
+    background-color: rgba(154, 205, 50,0.4);
+}
+.bets-list li:nth-child(3){
+    border : 4px solid rgba(135, 206, 235,0.6);
+    background-color: rgba(135, 206, 235,0.4);
+}
+.bets-list li:nth-child(4){
+    border : 4px solid rgba(255, 255, 0,0.9);
+    background-color: rgba(255,255,0,0.4);
+}
+.bets-list li:nth-child(5){
+    border : 4px solid rgba(255, 165, 0,0.6);
+    background-color: rgba(255,165,0,0.4);
+}
+.bets-list li:nth-child(6){
+    border : 4px solid rgba(255, 192, 203,0.8);
+    background: rgba(255,192,203,0.4);
+}
