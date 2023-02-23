@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 
 const Result = ({count , bet,balance,setBalance }) => {
-    const num = (((count*10)/10)*((bet*10)/10))
+    const num = (((count*10)/10)*((bet*10)/10)*10)
     console.log("Count is ", count)
     const calculatedBalance = count > 0 ? balance + num : balance;
     useEffect(() => {

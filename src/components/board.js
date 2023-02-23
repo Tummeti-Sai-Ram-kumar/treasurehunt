@@ -252,7 +252,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
                 <div class='buttons'>
                     <button disabled={startt ? true : false} onClick={start}>Start</button>
                     <button disabled={undo.length === 0 || time <= 0 || !startt? true : false} onClick={undoo}>Undo</button>
-                    <button onClick={newGame}>New</button>
+                    <button onClick={newGame} disabled={time === 0 ? false : true}>New</button>
                     <button onClick={restore} disabled={time !== 0 && startt && c !== 0 ? false : true}>Restore</button>
                 </div>
             </div>
