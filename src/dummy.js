@@ -9,9 +9,8 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
 
     console.log(count)
 
-    const [c,setC] = useState(0)
+    
     const [undo,setUndo] = useState([])
-    const [rest , setRestore] = useState([])
     const [dummy ,setDummy] = useState(0)
     const [bet, setBet] = useState(0)
     const [balance, setBalance] = useState(localStorage.getItem('balance'))
@@ -19,8 +18,6 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     const value = []
     const [startt, setStartt] = useState(false)
     console.log(undo)
-    
-
     useEffect(() => {
         console.log(chip)
 
@@ -154,35 +151,31 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
         console.log("New Game")
         setBalance(localStorage.getItem('balance'))
         setBet(0)
-        setRestore(numbers)
         setNumbers([])
         setTreasure([])
-      //  setChip(1)
+        setChip(1)
         setUndo([])
         setTime(15)
         setStartt(false)
         setCount(0)
-        setC(c+1)
+
         for (let i = 1; i <= 48; i++)
             document.getElementById(i).style.background = '#c6c0a8'
     }
     function restore(){
-        setNumbers(rest)
-        console.log("Hello World")
-        rest.map((e) => {
-            if(rest.includes(e)){
-                numbers.push(e)
-                document.getElementById(e).style.background = "#749774"
-            }
+
+        treasure.map((e) => {
+            if(numbers.includes(e))
+            document.getElementById(e).style.background = "#749774"
+            else
+            document.getElementById(e).style.background = '#c6c0a8'
         })
-        
-        console.log(rest , numbers)
-        setBet(chip*numbers.length)
+
         setCount(0)
-        setBalance(localStorage.getItem('balance') - chip*numbers.length)
+        setBalance(localStorage.getItem('balance') - bet)
         setTreasure([])
-      //  setTime(15)
-       // setStartt(false)
+        setTime(15)
+        setStartt(false)
     }
     function undoo(){
         if(dummy === 1){
@@ -257,9 +250,9 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
                 </div>
                 <div class='buttons'>
                     <button disabled={startt ? true : false} onClick={start}>Start</button>
-                    <button disabled={undo.length === 0 || time <= 0 || !startt? true : false} onClick={undoo}>Undo</button>
+                    <button disabled={undo.length === 0 || time <= 0? true : false} onClick={undoo}>Undo</button>
                     <button onClick={newGame}>New</button>
-                    <button onClick={restore} disabled={time !== 0 && startt && c !== 0 ? false : true}>Restore</button>
+                    <button onClick={restore} disabled={time !== 0 ? true : false}>Restore</button>
                 </div>
             </div>
         </div>

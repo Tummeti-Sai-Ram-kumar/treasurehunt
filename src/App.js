@@ -9,7 +9,7 @@ function App() {
   localStorage.setItem('balance',1000)
   const values = [];
   for(let i=0;i<48;i++){
-    values.push(i+1);
+    values.push((i+1));
   }
   return (
     <React.Fragment>
