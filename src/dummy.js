@@ -21,7 +21,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     useEffect(() => {
         console.log(chip)
 
-
+        console.log(undo)
         coins.forEach(element => {
             console.log(element, chip)
             if (element !== parseFloat(chip)) {
@@ -170,7 +170,6 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
             else
             document.getElementById(e).style.background = '#c6c0a8'
         })
-
         setCount(0)
         setBalance(localStorage.getItem('balance') - bet)
         setTreasure([])

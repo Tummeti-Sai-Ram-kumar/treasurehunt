@@ -12,14 +12,14 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     const [c,setC] = useState(0)
     const [undo,setUndo] = useState([])
     const [rest , setRestore] = useState([])
-    const [dummy ,setDummy] = useState(0)
+    const [dummy ,setDummy] = useState(['1'])
     const [bet, setBet] = useState(0)
     const [balance, setBalance] = useState(localStorage.getItem('balance'))
     const [chip, setChip] = useState(1)
     const value = []
     const [startt, setStartt] = useState(false)
     console.log(undo)
-    
+    console.log("dummy  : " , dummy)
 
     useEffect(() => {
         console.log(chip)
@@ -86,7 +86,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
         console.log(event)
         console.log("Changing")
         setChip(event.target.getAttribute("index"))
-        setDummy(dummy + 1)
+        setDummy([...dummy  , event.target.getAttribute("index")])
         setUndo([...undo , {0:event , 1:event.target.getAttribute("index")}])
     }
 
@@ -157,7 +157,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
         setRestore(numbers)
         setNumbers([])
         setTreasure([])
-      //  setChip(1)
+        setChip(1)
         setUndo([])
         setTime(15)
         setStartt(false)
@@ -175,7 +175,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
                 document.getElementById(e).style.background = "#749774"
             }
         })
-        
+
         console.log(rest , numbers)
         setBet(chip*numbers.length)
         setCount(0)
@@ -185,14 +185,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
        // setStartt(false)
     }
     function undoo(){
-        if(dummy === 1){
-            console.log("Setting Chio to 1")
-            setChip(1)
-            undo.pop()
-            setDummy(dummy - 1)
-        }
-        else{
-            console.log(undo)
+        console.log(undo)
             let x = undo.pop()
             console.log("Prop" , x)
             
@@ -209,14 +202,15 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
                 setBet(bet - chip)
             }
             else{
-                console.log("Dy" , dummy)
-                let [y] = undo.slice(-1)
-                console.log(y)
-                setDummy(dummy - 1)
-                setChip(parseInt(y[1]))
+                // console.log("Dy" , dummy)
+                // let [y] = undo.slice(-1)
+                // console.log(y)
+                // setDummy(dummy - 1)
+                // setChip(parseInt(y[1]))
+                dummy.pop()
+                let y = dummy[dummy.length - 1]
+                setChip(parseInt(y))
             }
-        }
-        
         
         
         console.log(numbers)
