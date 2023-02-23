@@ -236,6 +236,10 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
                         <p>Bet Placed</p>
                         <p><span><BiEuro class='icon' /></span>{bet}</p>
                     </div>
+                    <div class='elements'>
+                        {time !== 0 && <p>Result</p>}
+                        {time === 0 && <Result count={count} bet={bet} balance={balance} setBalance={setBalance} ></Result>}
+                    </div>
                 </div>
                 <div class="history">
                     <h3>Result</h3>

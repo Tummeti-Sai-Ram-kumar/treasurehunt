@@ -218,6 +218,9 @@ body{
     cursor: pointer;
     margin-top: 20px;
 }
+.details .elements{
+    display: none;
+}
 
 @media screen and (max-width : 600px) {
     nav p{
@@ -282,7 +285,7 @@ body{
 
     .component .details{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         width: 90%;
         margin : 0px auto;
     }
@@ -303,17 +306,12 @@ body{
         
     }
     .details div p:last-child{
-        font-family: Poppins;
         font-size: 12px;
     }
     .details span{
         margin-top: 10px;
     }
     
-    .component .history{
-        display: none;
-    }
-
     .buttons{
         display: flex;
         justify-content: center;
@@ -325,5 +323,16 @@ body{
         font-size: 14px;
         margin-top: 0px;
     }
+
+    .component .history{
+        display: none;
+    }
+    .details .elements{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
 }
 
