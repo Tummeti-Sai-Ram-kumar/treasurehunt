@@ -224,7 +224,7 @@ body{
 
 @media screen and (max-width : 600px) {
     .board{
-        margin-top: 10px;
+        margin : 5px auto;
     }
     nav p{
         font-size: 18px;
@@ -277,7 +277,7 @@ body{
         position: relative;
         display: grid;
         grid-template-columns: repeat(6 , 1fr);
-        grid-template-rows: repeat(7, 50px);
+        grid-template-rows: repeat(7, 52px);
         width: 100%;
         margin-left : 10px;
     } 
