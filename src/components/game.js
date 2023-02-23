@@ -12,7 +12,7 @@ import Instruct from './instruct'
 
 
 const GameBoard = ({ values }) => {
-    var [time, setTime] = useState(25)
+    var [time, setTime] = useState(15)
     const [select , setSelect] = useState(false)
     const [instruct, setInstruct] = useState(true)
     const [visible, setVisible] = useState(true)
