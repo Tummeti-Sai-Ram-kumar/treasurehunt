@@ -7,7 +7,7 @@ import Result from "./result";
 const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, setTreasure, treasure }) => {
     var coins = [1, 2, 5, 10, 50, 100];
 
-    console.log(count)
+    console.log(count , setCount)
 
     const [c,setC] = useState(0)
     const [undo,setUndo] = useState([])
@@ -101,14 +101,14 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
         console.log(numbers)
         //   value.push(10)
         while (value.length < 5) {
-            const num = Math.floor(Math.random() * 48) + 1;
+            const num = Math.floor(Math.random() * 10) + 1;
 
             if (!value.includes(num)) {
                 document.getElementById(num).style.background = '#FFD700'
                 value.push(num)
                 if (numbers.includes(num)) {
                     console.log("VValue Found")
-                    setCount(() => count+1)
+                    setCount((count) => count+1)
                     document.getElementById(num).style.background = '#FFA500'
                 }
             }
