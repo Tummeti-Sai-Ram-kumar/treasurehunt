@@ -49,23 +49,26 @@
 }
 
 @media screen and (max-width : 600px) {
+    .bets{
+        width: 90%;
+        margin: 0px auto;
+    }
     .bets-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .bets-list li{
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        display: none;
-    }
-    .bets-list li{
-        font-size : 14px;
-        font-family : "Russo One";
+        font-size : 12px;
         padding : 10px;
-        height : 10px;
+        height : 20px;
         width : 20px;
         text-align: center;
-        border-radius : 30%;
+        border-radius : 50%;
         box-shadow : 1px 1px 10px grey;
-        margin: auto;
     }
     
 }
