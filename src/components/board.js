@@ -158,6 +158,8 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     }
     function newGame() {
         console.log("New Game")
+        document.getElementsByClassName('timer')[0].style.borderColor = "#85be85"
+        document.getElementsByClassName('timer')[0].style.color = "#85be85"
         setBalance(localStorage.getItem('balance'))
         setBet(0)
         setRestore(numbers)
