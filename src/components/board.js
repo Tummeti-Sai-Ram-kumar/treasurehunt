@@ -125,10 +125,16 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     }
 
     useEffect(() => {
+
         if (time === 0) {
             //  generateRandom()
 
             generateTreasure()
+        }
+        if(time <= 3){
+
+            document.getElementsByClassName('timer')[0].style.borderColor = "red"
+            document.getElementsByClassName('timer')[0].style.color = "red"
         }
     }, [time])
 

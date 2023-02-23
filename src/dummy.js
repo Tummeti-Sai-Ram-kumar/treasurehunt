@@ -88,10 +88,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     }
 
     console.log(time)
-    if (time === 0) {
-        const num = (((count * 10) / 10) * ((bet * 10) / 10))
-        console.log(num)
-    }
+    
 
     const generateTreasure = () => {
         console.log(treasure)
@@ -122,6 +119,7 @@ const Board = ({ values, numbers, setNumbers, time, count, setCount, setTime, se
     }
 
     useEffect(() => {
+        
         if (time === 0) {
             //  generateRandom()
 
